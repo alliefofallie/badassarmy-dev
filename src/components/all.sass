@@ -1,27 +1,26 @@
 @import "~bulma/sass/utilities/initial-variables"
 
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin|Oswald&display=swap')
 
 // badass army colors
 $badass-green: #bada55
-
-// Config vars
-// Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
 
 $primary: $badass-green
 $primary-invert: $black
 $body-color: $badass-green
 $black: #000000
+$title-color: $white
+$subtitle-color: $white
 
 .navbar .navbar-menu
   box-shadow:none !important
   background-color: $black
-  height: 200px
+  height: 150px
 
 .navbar-brand img
-  width: 150px
-  height: 150px
+  width: 100px
+  height: 100px
 
 .content .taglist
   list-style: none
@@ -47,16 +46,14 @@ $black: #000000
   right: 50%
   margin: 2em -50vw
   background-size: cover
-  background-position: center top
   display: flex
   justify-content: center
   align-items: center
 
 .full-width-image
     width: 100vw
-    height: 800px
+    height: 700px
     background-size: cover
-    background-position: center top
     background-repeat: no-repeat
     display: flex
     justify-content: center
@@ -77,8 +74,8 @@ $black: #000000
     font-weight: 700
     color: #bada55
     text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
+    -webkit-box-shadow: inset 0 0 0 2px #000000
+    box-shadow: inset 0 0 0 2px #bada55
     -webkit-transition: all .15s ease
     transition: all .15s ease
 
@@ -86,7 +83,19 @@ $black: #000000
   margin-top: 0 !important
 
 .navbar-item .icon
+  color: $black
+
+.navbar-start .navbar-item
+  align-items: center
   color: $white
+  font-family: 'Libre Franklin'
+  font-size: 1.5rem
+  padding: 10px
+  display: flex
+  flex-grow: 1
+  flex-direction: column
+  justify-content: center
+
 // Override for use of svg's from https://simpleicons.org/
 .icon svg
   width: 1.5rem
@@ -103,14 +112,15 @@ footer.footer
 //Menu overrides
 $menu-item-color: $black
 $menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
+$menu-item-hover-background-color: $black !important
 $menu-item-active-color: $badass-green
 $menu-item-active-background-color:	$black
 $menu-list-border-left: 1px solid $black
 $menu-label-color: $black
 
-
 $navbar-item-img-max-height: 15rem !default
+$navbar-item-hover-color: $badass-green
+$navbar-item-hover-background-color: $black
 
 .menu-label
   font-size: 1em !important
@@ -140,8 +150,21 @@ $navbar-item-img-max-height: 15rem !default
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
 
-
 @import "~bulma"
+
+h1,
+h2,
+h3,
+  font-family: "Oswald";
+
+a,
+  color: $white;
+
+@media screen and (min-width: 1024px)
+  .is-size-1-desktop
+    font-size: 5rem !important;
+  .is-size-4-desktop
+    font-size: 3rem !important;
 
 
 // responsiveness

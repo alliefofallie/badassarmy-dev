@@ -32,23 +32,28 @@ export const IndexPageTemplate = ({
           height: '150px',
           lineHeight: '1',
           justifyContent: 'space-around',
-          alignItems: 'left',
+          alignItems: 'center',
           flexDirection: 'column',
         }}
       >
         <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-desktop"
           style={{
+            textAlign: 'center',
             backgroundColor: '#bada55',
             color: 'black',
             lineHeight: '1',
             padding: '0.25em',
+            width: '8em',
           }}
         >
           {title}
+
         </h1>
+        <br></br>
+        <br></br>
         <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+          className="is-size-5-mobile is-size-5-tablet is-size-4-desktop"
           style={{
             backgroundColor: 'black',
             color: '#bada55',
@@ -57,6 +62,7 @@ export const IndexPageTemplate = ({
           }}
         >
           {subheading}
+
         </h3>
       </div>
     </div>

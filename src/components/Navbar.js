@@ -59,18 +59,30 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
+            <div className="navbar-start">
+              <Link className="navbar-item" to="/gethelp">
+                Get Help
               </Link>
-              <Link className="navbar-item" to="/products">
-                Products
+              <Link className="navbar-item" to="/statelaws">
+                State Laws
               </Link>
               <Link className="navbar-item" to="/blog">
                 Blog
               </Link>
+              <Link className="navbar-item" to="/donate">
+                Donate
+              </Link>
               <Link className="navbar-item" to="/contact">
                 Contact
+              </Link>
+              <a className="navbar-item" href="https://thebadassarmy.threadless.com/" target="_blank" ref="noopener norefferer">
+                Badass Shop
+              </a>
+              <Link className="navbar-item" to="/press">
+                Press
+              </Link>
+              <Link className="navbar-item" to="/speaking">
+                Speaking Engagements
               </Link>
               <Link className="navbar-item" to="/contact/examples">
                 Form Examples
