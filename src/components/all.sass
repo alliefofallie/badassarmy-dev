@@ -37,6 +37,24 @@ $subtitle-color: $white
     margin-bottom: 1.5rem
     margin-top: 0
 
+.content
+  font-size: 24px
+  font-family: "Libre Franklin"
+
+p,
+  font-size: 24px;
+  font-family: "Libre Franklin"
+
+.full-size-image-container
+  max-height: 1500px
+  max-width: 1500px
+  overflow: hidden
+
+.full-size-image
+  max-width: 100%
+  max-height: 100%
+  object-fit: contain
+
 // Helper Classes
 .full-width-image-container
   width: 200vw
@@ -152,10 +170,27 @@ $navbar-item-hover-background-color: $black
 
 @import "~bulma"
 
+.content h1,
+.content h2,
+  font-family: "Oswald";
+  color: $white;
+.content h3,
+  font-family: "Oswald";
+  color: $badass-green;
+
+.image img,
+  max-width: 100%;
+  height: auto;
+
+.thumbnail img,
+  width: 30%;
+  height: 30%;
+
 h1,
 h2,
 h3,
   font-family: "Oswald";
+  color: $white;
 
 a,
   color: $white;

@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
 
-export const GetHelpTemplate = ({ title, content, contentComponent }) => {
+export const VictimsTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -18,12 +18,6 @@ export const GetHelpTemplate = ({ title, content, contentComponent }) => {
                 {title}
               </h2>
               <PageContent className="content" content={content} />
-              <center>
-              <br></br>
-              <a href="http://badassarmy.org/victims/"><figure class="thumbnail"><img src="../img/help-768x768.jpeg" /></figure></a>
-              <br></br>
-              <figure class="image"><img src="../img/Text-placeholder-977x1024.png" /></figure>
-              </center>
             </div>
           </div>
         </div>
@@ -32,18 +26,18 @@ export const GetHelpTemplate = ({ title, content, contentComponent }) => {
   )
 }
 
-GetHelpTemplate.propTypes = {
+VictimsTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-const GetHelp = ({ data }) => {
+const Victims = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <GetHelpTemplate
+      <VictimsTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
@@ -52,14 +46,14 @@ const GetHelp = ({ data }) => {
   )
 }
 
-GetHelp.propTypes = {
+Victims.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default GetHelp
+export default Victims
 
-export const getHelpQuery = graphql`
-  query GetHelp($id: String!) {
+export const VictimsQuery = graphql`
+  query Victims($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
